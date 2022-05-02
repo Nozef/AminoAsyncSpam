@@ -32,4 +32,4 @@ async def send_message(subclient: aminoed.CommunityClient, chatId: str, message:
 async def main(client: aminoed.Client):
     await auth(client)
     subclient = aminoed.CommunityClient(comId=await choise_community(client))
-    await send_message(subclient, await choise_chat(subclient), message=input("Message >> "), messageType=input("Message type >> "))
+    await send_message(subclient, await choise_chat(subclient), message=input("Message >> "), messageType=int(input("Message type >> "))
